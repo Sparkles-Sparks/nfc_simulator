@@ -109,7 +109,7 @@ All tags are automatically saved to `nfc_tags.json` in the application directory
 
 This project is open source and available under the MIT License.
 
-### GERMAN VERSION
+# GERMAN VERSION
 
 # NFC Simulator für Windows
 
