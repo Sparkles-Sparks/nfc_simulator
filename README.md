@@ -77,7 +77,6 @@ Tags store data in JSON format. The default structure includes:
   }
 }
 ```
-```
 
 ## Requirements
 
@@ -109,3 +108,116 @@ All tags are automatically saved to `nfc_tags.json` in the application directory
 ## License
 
 This project is open source and available under the MIT License.
+
+### GERMAN VERSION
+
+# NFC Simulator für Windows
+
+Eine leichte Windows-Anwendung zum Simulieren von NFC-Tag-Lese- und Schreibvorgängen. Dieses Tool ist perfekt zum Testen der NFC-Funktionalität ohne physische Hardware.
+
+## Funktionen
+
+- Erstellen und Verwalten von virtuellen NFC-Tags
+- Simulieren von Lesevorgängen
+- Simulieren von Schreibvorgängen
+- Speichern und Laden von Tags zwischen Sitzungen
+- Einfache und intuitive Benutzeroberfläche
+- Keine externen Abhängigkeiten außer Pythons Standardbibliothek
+
+## Installation
+
+1. Stellen Sie sicher, dass Python 3.6 oder höher installiert ist
+2. Es werden keine zusätzlichen Pakete benötigt - verwendet nur Standardbibliotheksmodule
+
+## Installation
+
+1. Klonen Sie dieses Repository:
+
+   ```bash
+   git clone https://github.com/yourusername/nfc-simulator.git
+   cd nfc-simulator
+   ```
+
+2. Installieren Sie die erforderlichen Pakete:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Verwendung
+
+1. Starten Sie die Anwendung:
+
+   ```bash
+   python nfc_simulator.py
+   ```
+
+2. **Neues Tag erstellen**:
+   - Klicken Sie auf die Schaltfläche "New Tag", um ein neues virtuelles NFC-Tag zu erstellen
+   - Eine eindeutige ID wird automatisch generiert
+
+3. **Lesevorgänge simulieren**:
+   - Wählen Sie ein Tag aus der linken Liste aus
+   - Klicken Sie auf "Simulate Read", um das Lesen des Tags zu simulieren
+   - Die Daten des Tags werden im Editor angezeigt
+   - Optional können Sie die Tag-Daten mit virtuellen Eingaben an das aktive Fenster senden
+
+4. **Schreibvorgänge simulieren**:
+   - Wählen Sie ein Tag aus der Liste aus
+   - Ändern Sie die JSON-Daten im Editor
+   - Klicken Sie auf "Simulate Write", um die Änderungen am Tag zu speichern
+
+5. **Tags löschen**:
+   - Wählen Sie ein Tag aus der Liste aus
+   - Klicken Sie auf "Delete Tag", um es zu entfernen
+
+6. **Serielle Kommunikation**:
+   - Wählen Sie einen verfügbaren COM-Port aus
+
+## Tag-Datenformat
+
+Tags speichern Daten im JSON-Format. Die Standardstruktur enthält:
+
+```json
+{
+  "id": "eindeutige-tag-id",
+  "created_at": "zeitstempel",
+  "last_modified": "zeitstempel",
+  "data": {
+    "type": "virtual_nfc_tag",
+    "version": "1.0",
+    "content": "Ihre benutzerdefinierten Daten hier"
+  }
+}
+```
+
+## Anforderungen
+
+- Python 3.6 oder höher (nur Standardbibliothek)
+- Windows-Betriebssystem (für beste Kompatibilität)
+- Erforderliche Python-Pakete (siehe `requirements.txt`):
+  - pyserial
+  - pyautogui
+  - keyboard
+
+## Datenspeicherung
+
+Alle Tags werden automatisch in der Datei `nfc_tags.json` im Anwendungsverzeichnis gespeichert. Diese Datei wird automatisch erstellt, wenn Sie Ihr erstes Tag anlegen.
+
+## Fehlerbehebung
+
+### Keine COM-Ports verfügbar
+
+1. Stellen Sie sicher, dass die virtuellen COM-Port-Treiber installiert sind (z.B. com0com)
+2. Überprüfen Sie den Geräte-Manager auf Hardwarekonflikte
+3. Versuchen Sie, USB-Geräte aus- und wieder anzuschließen
+
+### Virtuelle Eingabe funktioniert nicht
+
+1. Führen Sie die Anwendung als Administrator aus
+2. Überprüfen Sie, ob eine andere Anwendung die Eingabe blockiert
+3. Versuchen Sie es mit der Zwischenablagenmethode anstelle der direkten Eingabe
+
+## Lizenz
+
+Dieses Projekt ist Open Source und steht unter der MIT-Lizenz.
