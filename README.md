@@ -109,6 +109,10 @@ All tags are automatically saved to `nfc_tags.json` in the application directory
 
 This project is open source and available under the MIT License.
 
+
+##Open Source 4 Life! 
+###Spark Spark Spark ^^
+
 # GERMAN VERSION
 
 # NFC Simulator für Windows
@@ -221,3 +225,7 @@ Alle Tags werden automatisch in der Datei `nfc_tags.json` im Anwendungsverzeichn
 ## Lizenz
 
 Dieses Projekt ist Open Source und steht unter der MIT-Lizenz.
+
+
+##Open Source 4 Life! 
+###Spark Spark Spark ^^
